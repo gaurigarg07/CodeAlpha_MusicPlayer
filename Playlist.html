@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SWAY | Playlists</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Playlist.css">
+</head>
+
+ <div class="navbar">
+    <div class="logo">
+         <img class="sway-logo" src="images/Logo.png" alt="">
+        <p class="logo-name">SWA¥ 𓂃 𓈒𓏸</p>
+
+    </div>
+    <div class="nav-links">
+        <a class="navbar-a"  id="link" href="index.html">Home</a>
+        <a class="navbar-a"  id="link" href="index.html#made-for-you">Explore</a>
+        <a class="navbar-a"  id="link" href="Playlist.html">Playlists</a>
+        <a class="navbar-a"  id="link" href="favourites.html">Favourites</a>
+    </div>
+  
+    <div class="nav-right">
+        <div class="search-bar">
+          <span class="search-icon">🔎︎</span>
+          <input
+           type="text" placeholder="Search songs,artists,albums.." autocomplete="off" id="navbar-search">
+          <div id="navbar-search-results" class="search-results"></div>
+        </div> 
+            <button class="notify-icon">🕭</button>
+          <div class="profile" id="profile-icon"
+          title="Click to edit your name">
+          <span id="profile-letter">S</span>
+          </div>
+          <div class="profile-popup" id="profile-popup">
+            <h2>Your SWAY Profile</h2>
+            <p>What Should we call you ?</p>
+            <input type="text" id="profile-name" placeholder="Enter your name, listener 🎧" maxlength="30">
+            <button id="profile-save" type="button">Continue</button>
+    </div>
+     </div>
+     </div>
+
+<body class="playlists-page">
+
+    <main class="playlist-library">
+
+        <header class="playlist-header">
+            <img src="images/favourites-img.jpeg" alt="" class="playlist-bg-image">
+            <div class="playlist-header-content">
+            <a class="playlist-back-home" href="index.html">← Home</a>
+            <h1> Playlists</h1>
+            <p class="playlist-eyebrow">YOUR SOUND, YOUR STORY ♡</p>
+            </div>
+        </header>
+
+        <section id="playlist-library-view">
+            <div class="playlist-section-heading">
+                <h2>All Playlists</h2>
+                <button id="open-create-playlist" type="button">
+                    + Create Playlist
+                </button>
+            </div>
+
+            <div id="playlist-cards" class="playlist-grid"></div>
+        </section>
+
+        <section id="playlist-detail-view" hidden>
+            <div class="playlist-detail-actions">
+    <button type="button" id="back-to-playlists">
+        ← Back to Playlists
+    </button>
+
+    <button type="button" id="delete-playlist-button" hidden>
+        🗑 Delete Playlist
+    </button>
+</div>
+
+            <div class="playlist-detail-header">
+                <img id="detail-cover" src="" alt="Playlist cover">
+                <div>
+                    <p class="playlist-eyebrow">PLAYLIST</p>
+                    <h2 id="detail-title"></h2>
+                    <p id="detail-count"></p>
+                </div>
+            </div>
+
+            <div id="playlist-song-list" class="playlist-song-list"></div>
+        </section>
+
+        <section id="create-playlist-view" hidden>
+            <button id="cancel-create-playlist" type="button" class="back-button">
+                ← Back to Playlists
+            </button>
+             <section class="create-playlist-card">
+
+    <div class="create-playlist-overlay"></div>
+
+    <div class="create-playlist-content">
+
+        <span class="playlist-label">YOUR MUSIC, YOUR MOOD</span>
+
+        <h2>Create a<br>Playlist</h2>
+
+        <p class="playlist-subtitle">
+            What's the mood today?
+        </p>
+
+        <form id="create-playlist-form">
+
+            <div class="playlist-input-wrapper">
+                <input
+                    id="new-playlist-name"
+                    type="text"
+                    placeholder="Playlist name..."
+                    maxlength="50"
+                    required
+                >
+                <span class="input-pencil">✎</span>
+            </div>
+
+            <h3 class="select-songs-heading">Add your songs</h3>
+
+            <div id="song-selection-list" class="song-selection-list"></div>
+
+            <button type="submit" id="save-playlist-button">
+                Create Playlist <span>→</span>
+            </button>
+
+            <p id="create-playlist-message" role="status"></p>
+
+        </form>
+
+    </div>
+</section>
+        </section>
+       
+
+    </main>
+    <script src="Playlist.js"></script>
+</body>
+</html>
